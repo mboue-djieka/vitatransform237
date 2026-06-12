@@ -83,6 +83,15 @@
     .reco-section-header h2 { font-size: 1.2rem; font-weight: 800; color: var(--primary-dark); }
     .reco-section p.reco-desc { color: #4a5550; margin-bottom: 18px; }
 
+    .product-card { display: flex; gap: 18px; align-items: flex-start; background: var(--light); border-radius: var(--radius); padding: 18px; margin-bottom: 18px; }
+    .product-card img { width: 130px; height: 130px; object-fit: cover; border-radius: 12px; flex-shrink: 0; }
+    .product-card-body { flex: 1; min-width: 0; }
+    .product-card-brand { display: inline-block; background: var(--primary); color: white; font-size: .7rem; font-weight: 700; padding: 3px 11px; border-radius: 50px; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 8px; }
+    .product-card-body h3 { font-size: 1rem; font-weight: 800; color: var(--primary-dark); margin-bottom: 8px; }
+    .product-card-body ul { list-style: none; font-size: .87rem; color: #4a5550; }
+    .product-card-body li { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 5px; }
+    .product-card-body li i { color: var(--accent); margin-top: 4px; flex-shrink: 0; font-size: .7rem; }
+
     .reco-cta { display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: white; padding: 11px 22px; border-radius: 50px; font-weight: 700; font-size: .88rem; transition: all .3s ease; }
     .reco-cta:hover { background: #1db954; transform: translateY(-2px); }
 
@@ -100,6 +109,8 @@
       .reco-main { padding: 36px 16px; }
       .nav-cta { display: none; }
       .reco-section-header { align-items: flex-start; }
+      .product-card { flex-direction: column; }
+      .product-card img { width: 100%; height: 180px; }
     }
   </style>
 
@@ -172,7 +183,19 @@
       <div class="reco-icon"><i class="fas fa-apple-whole"></i></div>
       <h2>Nutrition</h2>
     </div>
-    <p class="reco-desc">Carences en fer, vitamine D, magnésium, vitamines du groupe B... Une bonne partie de la fatigue et des petits désagréments du quotidien vient de l'alimentation. Nous orientons vers des compléments nutritionnels ciblés (multivitamines, fer, magnésium, oméga-3, probiotiques), à utiliser en complément, et non en remplacement, d'une alimentation équilibrée.</p>
+    <p class="reco-desc">Carences en fer, vitamine D, magnésium, vitamines du groupe B... Une bonne partie de la fatigue et des petits désagréments du quotidien vient de l'alimentation. Nous orientons vers des compléments nutritionnels ciblés, à utiliser en complément, et non en remplacement, d'une alimentation équilibrée. Exemple :</p>
+    <div class="product-card">
+      <img src="photos/produits/alphameta-nutrition.jpg" alt="AlphaMeta, boisson aux céréales bio Oryza" loading="lazy">
+      <div class="product-card-body">
+        <span class="product-card-brand">AlphaMeta - Bzzworld</span>
+        <h3>AlphaMeta - Boisson aux céréales bio Oryza</h3>
+        <ul>
+          <li><i class="fas fa-check"></i> À base de riz brun et d'Alpha Polysaccharides Peptides</li>
+          <li><i class="fas fa-check"></i> Pensée pour soutenir l'énergie au quotidien</li>
+          <li><i class="fas fa-check"></i> Certifiée Vegan, USDA Organic, Halal</li>
+        </ul>
+      </div>
+    </div>
     <a href="https://wa.me/237681959349?text=Bonjour%2C%20je%20viens%20de%20VitaTransform237%20et%20j%27aimerais%20des%20conseils%20personnalis%C3%A9s." target="_blank" class="reco-cta"><i class="fab fa-whatsapp"></i> Demander plus d'infos</a>
   </section>
 
@@ -181,7 +204,19 @@
       <div class="reco-icon"><i class="fas fa-person-running"></i></div>
       <h2>Forme &amp; Poids</h2>
     </div>
-    <p class="reco-desc">Perte de poids qui stagne, métabolisme ralenti, ventre gonflé... Nous orientons vers des produits d'accompagnement (brûleurs naturels, contrôle de l'appétit, drainants, protéines) à associer à une activité physique régulière et une alimentation adaptée, jamais comme solution isolée.</p>
+    <p class="reco-desc">Perte de poids qui stagne, métabolisme ralenti, ventre gonflé... Nous orientons vers des programmes d'accompagnement à associer à une activité physique régulière et une alimentation adaptée, jamais comme solution isolée. Exemple :</p>
+    <div class="product-card">
+      <img src="photos/produits/alphameta-programme-28-jours.jpg" alt="Programme 28 jours AlphaMeta" loading="lazy">
+      <div class="product-card-body">
+        <span class="product-card-brand">AlphaMeta - Programme 28 jours</span>
+        <h3>Programme d'accompagnement sur 28 jours</h3>
+        <ul>
+          <li><i class="fas fa-check"></i> 1 sachet AlphaMeta, 1 à 2 fois par jour selon le protocole</li>
+          <li><i class="fas fa-check"></i> À associer à une bonne hydratation et à de l'activité physique</li>
+          <li><i class="fas fa-check"></i> Programme renouvelable tous les 3 mois selon les besoins</li>
+        </ul>
+      </div>
+    </div>
     <a href="https://wa.me/237681959349?text=Bonjour%2C%20je%20viens%20de%20VitaTransform237%20et%20j%27aimerais%20des%20conseils%20personnalis%C3%A9s." target="_blank" class="reco-cta"><i class="fab fa-whatsapp"></i> Demander plus d'infos</a>
   </section>
 
@@ -190,7 +225,19 @@
       <div class="reco-icon"><i class="fas fa-spa"></i></div>
       <h2>Beauté</h2>
     </div>
-    <p class="reco-desc">Peau terne, acné adulte, chute de cheveux, taches pigmentaires liées au climat tropical... Nous orientons vers des soins et compléments beauté (antioxydants, soins ciblés peau et cheveux) pensés pour accompagner une routine adaptée au climat de Douala.</p>
+    <p class="reco-desc">Peau terne, acné adulte, chute de cheveux, taches pigmentaires liées au climat tropical... Nous orientons vers des soins et compléments beauté pensés pour accompagner une routine adaptée au climat de Douala. Exemple :</p>
+    <div class="product-card">
+      <img src="photos/produits/evador-parfum.jpg" alt="EVADOR, parfum SmartLab Beauty Bzzworld" loading="lazy">
+      <div class="product-card-body">
+        <span class="product-card-brand">EVADOR - SmartLab Beauty</span>
+        <h3>EVADOR - Eau de parfum</h3>
+        <ul>
+          <li><i class="fas fa-check"></i> Fragrance longue tenue, format vaporisateur de poche</li>
+          <li><i class="fas fa-check"></i> Présentation soignée, idéale au quotidien ou en cadeau</li>
+          <li><i class="fas fa-check"></i> Disponible en plusieurs senteurs</li>
+        </ul>
+      </div>
+    </div>
     <a href="https://wa.me/237681959349?text=Bonjour%2C%20je%20viens%20de%20VitaTransform237%20et%20j%27aimerais%20des%20conseils%20personnalis%C3%A9s." target="_blank" class="reco-cta"><i class="fab fa-whatsapp"></i> Demander plus d'infos</a>
   </section>
 
@@ -208,7 +255,19 @@
       <div class="reco-icon"><i class="fas fa-tooth"></i></div>
       <h2>Bucco-dentaire</h2>
     </div>
-    <p class="reco-desc">Mauvaise haleine, gencives sensibles, dents fragiles... Nous orientons vers des dentifrices et soins bucco-dentaires naturels, formulés pour une hygiène quotidienne en douceur, adaptés aux dents sensibles.</p>
+    <p class="reco-desc">Mauvaise haleine, gencives sensibles, dents fragiles... Nous orientons vers des dentifrices et soins bucco-dentaires naturels, formulés pour une hygiène quotidienne en douceur, adaptés aux dents sensibles. Exemple :</p>
+    <div class="product-card">
+      <img src="photos/produits/ezeno-dentifrice.jpg" alt="EZENO, dentifrice au ginseng et à l'arbre à thé" loading="lazy">
+      <div class="product-card-body">
+        <span class="product-card-brand">EZENO - Bzzworld</span>
+        <h3>EZENO - Dentifrice au Ginseng et à l'arbre à thé</h3>
+        <ul>
+          <li><i class="fas fa-check"></i> Formule sans fluor, au ginseng, à l'huile d'arbre à thé et au paeonol</li>
+          <li><i class="fas fa-check"></i> Pensée pour le confort des gencives sensibles</li>
+          <li><i class="fas fa-check"></i> Haleine fraîche longue durée, convient à toute la famille</li>
+        </ul>
+      </div>
+    </div>
     <a href="https://wa.me/237681959349?text=Bonjour%2C%20je%20viens%20de%20VitaTransform237%20et%20j%27aimerais%20des%20conseils%20personnalis%C3%A9s." target="_blank" class="reco-cta"><i class="fab fa-whatsapp"></i> Demander plus d'infos</a>
   </section>
 
@@ -217,7 +276,19 @@
       <div class="reco-icon"><i class="fas fa-mug-hot"></i></div>
       <h2>Café &amp; Énergie</h2>
     </div>
-    <p class="reco-desc">Pour celles et ceux qui ne veulent pas se passer de leur café mais cherchent une énergie plus stable, sans les pics et les chutes du café industriel : nous orientons vers des cafés naturels sélectionnés pour leur qualité et leur mode de préparation.</p>
+    <p class="reco-desc">Pour celles et ceux qui ne veulent pas se passer de leur café mais cherchent une énergie plus stable, sans les pics et les chutes du café industriel : nous orientons vers des cafés naturels sélectionnés pour leur qualité et leur mode de préparation. Exemple :</p>
+    <div class="product-card">
+      <img src="photos/produits/zenbru-ginseng-trio.jpg" alt="ZenBru, café au ginseng Bzzworld" loading="lazy">
+      <div class="product-card-body">
+        <span class="product-card-brand">ZenBru - Bzzworld</span>
+        <h3>ZenBru - Café au Ginseng</h3>
+        <ul>
+          <li><i class="fas fa-check"></i> Café torréfié associé au ginseng, en sachets individuels</li>
+          <li><i class="fas fa-check"></i> Pensé pour une énergie plus stable dans la journée</li>
+          <li><i class="fas fa-check"></i> Prêt en quelques secondes, format pratique</li>
+        </ul>
+      </div>
+    </div>
     <a href="https://wa.me/237681959349?text=Bonjour%2C%20je%20viens%20de%20VitaTransform237%20et%20j%27aimerais%20des%20conseils%20personnalis%C3%A9s." target="_blank" class="reco-cta"><i class="fab fa-whatsapp"></i> Demander plus d'infos</a>
   </section>
 
@@ -226,7 +297,19 @@
       <div class="reco-icon"><i class="fas fa-shield-heart"></i></div>
       <h2>Hygiène intime</h2>
     </div>
-    <p class="reco-desc">Confort au quotidien, prévention des irritations, choix de protections adaptées : nous orientons vers des produits d'hygiène intime pensés pour le bien-être féminin au quotidien.</p>
+    <p class="reco-desc">Confort au quotidien, prévention des irritations, choix de protections adaptées : nous orientons vers des produits d'hygiène intime pensés pour le bien-être féminin au quotidien. Exemple :</p>
+    <div class="product-card">
+      <img src="photos/produits/angel-moon-hygiene.jpg" alt="Angel Moon, serviettes hygiéniques Bzzworld" loading="lazy">
+      <div class="product-card-body">
+        <span class="product-card-brand">Angel Moon - Bzzworld</span>
+        <h3>Angel Moon - Serviettes hygiéniques Negative Ion Core</h3>
+        <ul>
+          <li><i class="fas fa-check"></i> Coton de qualité supérieure, ultra-fines (0,6 à 0,8 mm)</li>
+          <li><i class="fas fa-check"></i> Sans parfum, dernière couche respirante</li>
+          <li><i class="fas fa-check"></i> Gammes Nuit, Jour et Protège-slip</li>
+        </ul>
+      </div>
+    </div>
     <a href="https://wa.me/237681959349?text=Bonjour%2C%20je%20viens%20de%20VitaTransform237%20et%20j%27aimerais%20des%20conseils%20personnalis%C3%A9s." target="_blank" class="reco-cta"><i class="fab fa-whatsapp"></i> Demander plus d'infos</a>
   </section>
 
@@ -235,7 +318,19 @@
       <div class="reco-icon"><i class="fas fa-fire"></i></div>
       <h2>Vitalité masculine</h2>
     </div>
-    <p class="reco-desc">Baisse d'énergie, fatigue persistante, vitalité en berne après 40 ans... Nous orientons vers des compléments ciblant l'énergie et le bien-être masculin au quotidien, à discuter avec nous selon votre situation.</p>
+    <p class="reco-desc">Baisse d'énergie, fatigue persistante, vitalité en berne après 40 ans... Nous orientons vers des compléments ciblant l'énergie et le bien-être masculin au quotidien, à discuter avec nous selon votre situation. Exemple :</p>
+    <div class="product-card">
+      <img src="photos/produits/alphavmax-vitalite.jpg" alt="AlphaVMax, mélange Cordyceps Ganoderma Goji" loading="lazy">
+      <div class="product-card-body">
+        <span class="product-card-brand">AlphaVMax - Bzzworld</span>
+        <h3>AlphaVMax - Mélange Cordyceps, Ganoderma &amp; Baies de Goji</h3>
+        <ul>
+          <li><i class="fas fa-check"></i> Cordyceps, pour soutenir l'énergie</li>
+          <li><i class="fas fa-check"></i> Ganoderma, pour accompagner l'immunité</li>
+          <li><i class="fas fa-check"></i> Baies de Goji, traditionnellement associées à la vitalité</li>
+        </ul>
+      </div>
+    </div>
     <a href="https://wa.me/237681959349?text=Bonjour%2C%20je%20viens%20de%20VitaTransform237%20et%20j%27aimerais%20des%20conseils%20personnalis%C3%A9s." target="_blank" class="reco-cta"><i class="fab fa-whatsapp"></i> Demander plus d'infos</a>
   </section>
 
@@ -244,7 +339,19 @@
       <div class="reco-icon"><i class="fas fa-moon"></i></div>
       <h2>Sommeil</h2>
     </div>
-    <p class="reco-desc">Insomnie, réveils nocturnes, douleurs dorsales au réveil... La qualité de la literie et du système de couchage joue un rôle souvent sous-estimé. Nous orientons vers des solutions de couchage pensées pour améliorer le confort et la récupération.</p>
+    <p class="reco-desc">Insomnie, réveils nocturnes, douleurs dorsales au réveil... La qualité de la literie et du système de couchage joue un rôle souvent sous-estimé. Nous orientons vers des solutions de couchage pensées pour améliorer le confort et la récupération. Exemple :</p>
+    <div class="product-card">
+      <img src="photos/produits/ismarts3-sommeil.jpg" alt="iSMARTS3, sur-matelas et oreiller Bzzworld" loading="lazy">
+      <div class="product-card-body">
+        <span class="product-card-brand">iSMARTS3 - Bzzworld</span>
+        <h3>iSMARTS3 - Sur-matelas &amp; oreiller</h3>
+        <ul>
+          <li><i class="fas fa-check"></i> Sur-matelas (mattress topper) pour plus de confort</li>
+          <li><i class="fas fa-check"></i> Oreiller assorti, ensemble livré avec valise Bzzworld</li>
+          <li><i class="fas fa-check"></i> Disponible en Afrique depuis 2024</li>
+        </ul>
+      </div>
+    </div>
     <a href="https://wa.me/237681959349?text=Bonjour%2C%20je%20viens%20de%20VitaTransform237%20et%20j%27aimerais%20des%20conseils%20personnalis%C3%A9s." target="_blank" class="reco-cta"><i class="fab fa-whatsapp"></i> Demander plus d'infos</a>
   </section>
 
@@ -253,7 +360,19 @@
       <div class="reco-icon"><i class="fas fa-droplet"></i></div>
       <h2>Bien-être numérique</h2>
     </div>
-    <p class="reco-desc">Hydratation insuffisante, qualité de l'eau du quotidien, temps d'écran qui grignote le sommeil... Nous orientons vers des solutions de filtration et de qualité de l'eau, ainsi que des bonnes pratiques numériques, pour un quotidien plus sain.</p>
+    <p class="reco-desc">Hydratation insuffisante, qualité de l'eau du quotidien, temps d'écran qui grignote le sommeil... Nous orientons vers des solutions de filtration et de qualité de l'eau, ainsi que des bonnes pratiques numériques, pour un quotidien plus sain. Exemple :</p>
+    <div class="product-card">
+      <img src="photos/produits/alphaspin-hydratation.jpg" alt="AlphaSpin Straw, paille à eau structurée Bzzworld" loading="lazy">
+      <div class="product-card-body">
+        <span class="product-card-brand">AlphaSpin - Bzzworld</span>
+        <h3>AlphaSpin Straw - Paille à eau structurée</h3>
+        <ul>
+          <li><i class="fas fa-check"></i> Paille et disque en verre/métal, fabriqués en Allemagne</li>
+          <li><i class="fas fa-check"></i> Réutilisable, transparente, facile à nettoyer</li>
+          <li><i class="fas fa-check"></i> Pensée pour accompagner l'hydratation au quotidien</li>
+        </ul>
+      </div>
+    </div>
     <a href="https://wa.me/237681959349?text=Bonjour%2C%20je%20viens%20de%20VitaTransform237%20et%20j%27aimerais%20des%20conseils%20personnalis%C3%A9s." target="_blank" class="reco-cta"><i class="fab fa-whatsapp"></i> Demander plus d'infos</a>
   </section>
 
