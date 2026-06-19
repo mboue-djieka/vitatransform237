@@ -643,6 +643,48 @@
       .cat-grid { grid-template-columns: 1fr 1fr; }
       .hero-stats { flex-direction: column; gap: 10px; }
     }
+
+    /* ============================================================
+       LOCATION STRIP
+    ============================================================ */
+    .location-strip {
+      background: var(--primary-dark);
+      padding: 12px 0;
+      border-bottom: 3px solid var(--accent);
+    }
+    .location-strip-inner {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .ls-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,.82);
+      font-size: .83rem;
+      font-weight: 500;
+    }
+    .ls-item i { color: var(--accent-light); }
+    .ls-cta {
+      margin-left: auto;
+      background: var(--accent);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: .82rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: var(--transition);
+    }
+    .ls-cta:hover { background: var(--accent-light); transform: translateY(-1px); }
+    @media (max-width: 768px) {
+      .location-strip-inner { justify-content: center; }
+      .ls-cta { margin-left: 0; margin-top: 6px; width: 100%; justify-content: center; }
+    }
   </style>
 
   <!-- Consent Mode par defaut (RGPD) -->
@@ -709,12 +751,13 @@
 <header class="hero">
   <div class="container hero-grid">
     <div>
-      <div class="hero-badge"><span></span> Conseils bien-être &amp; vitalité, chaque semaine</div>
+      <div class="hero-badge"><span></span> <i class="fas fa-map-marker-alt" style="color:var(--accent-light);margin-right:2px;"></i> Douala, Cameroun &nbsp;&bull;&nbsp; Conseils bien-être &amp; vitalité</div>
       <h1 class="hero-title">Transformez votre <em>quotidien</em>, un petit geste à la fois</h1>
       <p class="hero-sub">Nutrition, forme, sommeil, beauté, énergie : des conseils pratiques et accessibles pour prendre soin de vous, écrits avec un regard d'expert santé basé à Douala.</p>
       <div class="hero-actions">
         <a href="blog.html" class="btn btn-accent"><i class="fas fa-book-open"></i> Lire les articles</a>
         <a href="https://wa.me/237681959349?text=Bonjour%2C%20je%20viens%20de%20VitaTransform237%20et%20j%27aimerais%20des%20conseils%20personnalis%C3%A9s." target="_blank" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Demander un conseil</a>
+        <a href="recommandations.html" class="btn btn-outline" style="border-color:var(--accent-light);color:var(--accent-light);"><i class="fas fa-box-open"></i> Produits à Douala</a>
       </div>
       <div class="hero-stats">
         <div>
@@ -744,6 +787,18 @@
     </div>
   </div>
 </header>
+
+<!-- LOCATION STRIP -->
+<div class="location-strip">
+  <div class="container">
+    <div class="location-strip-inner">
+      <div class="ls-item"><i class="fas fa-map-marker-alt"></i> <span>Basé à Douala, Cameroun</span></div>
+      <div class="ls-item"><i class="fas fa-truck-fast"></i> <span>Livraison à Douala &amp; environs</span></div>
+      <div class="ls-item"><i class="fas fa-hand-holding-dollar"></i> <span>Paiement à la livraison</span></div>
+      <a href="recommandations.html" class="ls-cta"><i class="fas fa-box-open"></i> Voir les produits disponibles</a>
+    </div>
+  </div>
+</div>
 
 <!-- CATEGORIES -->
 <section class="section" id="categories">
@@ -875,6 +930,18 @@
     </div>
     <!-- BLOG_PREVIEW_START -->
     <div class="blog-grid">
+      <a class="blog-card" href="article-ventre-gonfle-causes-solutions.html" data-cat="Forme & Poids">
+        <div class="blog-img" style="background-image:url('photos/article-ventre-gonfle-causes-solutions.jpg');background-size:cover;background-position:center;"></div>
+        <div class="blog-meta">
+          <span class="blog-cat">Forme & Poids</span>
+          <span class="blog-date">19 juin 2026</span>
+        </div>
+        <div class="blog-body">
+          <h3>Ventre gonflé : causes possibles et solutions</h3>
+          <p>Un ventre gonflé en permanence n'est pas toujours lié à la graisse. Tour d'horizon des causes possibles et des solutions à adopter.</p>
+          <span class="blog-link">Lire l'article <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
       <a class="blog-card" href="article-perte-de-poids-apres-40-ans.html" data-cat="Forme & Poids">
         <div class="blog-img" style="background-image:url('photos/article-perte-de-poids-apres-40-ans.jpg');background-size:cover;background-position:center;"></div>
         <div class="blog-meta">
@@ -899,18 +966,6 @@
           <span class="blog-link">Lire l'article <i class="fas fa-arrow-right"></i></span>
         </div>
       </a>
-      <a class="blog-card" href="article-pourquoi-je-ne-perds-pas-de-poids.html" data-cat="Forme & Poids">
-        <div class="blog-img" style="background-image:url('photos/article-pourquoi-je-ne-perds-pas-de-poids.jpg');background-size:cover;background-position:center;"></div>
-        <div class="blog-meta">
-          <span class="blog-cat">Forme & Poids</span>
-          <span class="blog-date">17 juin 2026</span>
-        </div>
-        <div class="blog-body">
-          <h3>Pourquoi je ne perds pas de poids malgré le sport</h3>
-          <p>Vous faites du sport régulièrement mais la balance ne bouge pas ? Voici les raisons les plus fréquentes, souvent ignorées.</p>
-          <span class="blog-link">Lire l'article <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </a>
     </div>
     <div style="text-align:center;margin-top:36px;">
       <a href="blog.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Voir tous les articles</a>
@@ -922,11 +977,16 @@
 <!-- CTA WHATSAPP -->
 <section class="cta-section">
   <div class="container">
-    <h2>Une question bien-être ? Parlons-en.</h2>
-    <p>Recevez des recommandations personnalisées et adaptées à votre situation, directement sur WhatsApp.</p>
-    <a href="https://wa.me/237681959349?text=Bonjour%2C%20je%20viens%20de%20VitaTransform237%20et%20j%27aimerais%20des%20conseils%20personnalis%C3%A9s." target="_blank" class="btn btn-primary">
-      <i class="fab fa-whatsapp"></i> Discuter maintenant
-    </a>
+    <h2>Basé à Douala. Disponible pour vous.</h2>
+    <p>Conseils personnalisés, produits livrés à Douala &amp; environs, paiement à la réception. Contactez-nous sur WhatsApp.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="https://wa.me/237681959349?text=Bonjour%2C%20je%20viens%20de%20VitaTransform237%20et%20j%27aimerais%20des%20conseils%20personnalis%C3%A9s." target="_blank" class="btn btn-primary">
+        <i class="fab fa-whatsapp"></i> Discuter maintenant
+      </a>
+      <a href="recommandations.html" class="btn btn-primary" style="background:var(--primary-dark);">
+        <i class="fas fa-box-open"></i> Voir les produits
+      </a>
+    </div>
   </div>
 </section>
 

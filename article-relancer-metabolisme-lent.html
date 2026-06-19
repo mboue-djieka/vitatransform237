@@ -163,7 +163,15 @@
       .author-card { flex-direction: column; align-items: center; text-align: center; }
       .reco-pick { flex-direction: column; }
     }
-  </style>
+  
+    /* Cross-link CPL */
+    .cross-cpl { background: #EEF4FB; border-left: 4px solid #1A3A5C; border-radius: 16px; padding: 24px 28px; margin: 36px 0; display: flex; align-items: flex-start; gap: 18px; }
+    .cross-cpl-icon { flex-shrink: 0; width: 48px; height: 48px; border-radius: 12px; background: #1A3A5C; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+    .cross-cpl-body h4 { font-size: 1rem; font-weight: 800; color: #1B4332; margin: 0 0 8px; font-family: "Poppins",sans-serif; }
+    .cross-cpl-body p { font-size: .87rem; color: #6B7280; margin: 0 0 14px; line-height: 1.6; }
+    .cross-cpl-link { display: inline-flex; align-items: center; gap: 7px; background: #1A3A5C; color: white; padding: 9px 18px; border-radius: 50px; font-size: .82rem; font-weight: 700; transition: all .3s; }
+    .cross-cpl-link:hover { background: #2A5080; transform: translateY(-1px); }
+    @media (max-width: 600px) { .cross-cpl { flex-direction: column; } .cross-cpl-icon { margin: 0 auto; } }</style>
 </head>
 <body>
 
@@ -383,7 +391,16 @@
 })();
 </script>
 
-<footer class="article-footer">
+<div class="article-wrap" style="padding-top:0;padding-bottom:0;">
+  <div class="cross-cpl">
+    <div class="cross-cpl-icon"><i class="fas fa-flask"></i></div>
+    <div class="cross-cpl-body">
+      <h4>Confirmez avec un bilan biologique</h4>
+      <p>Les compl&eacute;ments alimentaires sont efficaces quand ils r&eacute;pondent &agrave; un vrai besoin. Le <strong>Laboratoire Le Clair de la Plume</strong> &agrave; Douala vous propose des analyses rapides pour cibler vos carences r&eacute;elles avant de compl&eacute;menter.</p>
+      <a href="https://leclairdelaplume-labo.com/blog.html" target="_blank" rel="noopener" class="cross-cpl-link"><i class="fas fa-microscope"></i> Voir les bilans disponibles</a>
+    </div>
+  </div>
+</div><footer class="article-footer">
   <p>&copy; 2026 VitaTransform237 - <a href="https://wa.me/237681959349" target="_blank">+237 681 95 93 49</a></p>
   <p style="margin-top:6px;"><a href="index.html">Retour a l'accueil</a></p>
 </footer>
